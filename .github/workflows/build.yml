@@ -5,6 +5,12 @@ on:
     branches: [ "main" ]
 
 jobs:
+  strategy:
+    matrix:
+      alias:
+      - :rama
+      - :telemere
+
   build:
     runs-on: ubuntu-latest
 
@@ -30,4 +36,4 @@ jobs:
         key: cljdeps-${{ hashFiles('deps.edn') }}
         restore-keys: cljdeps-
 
-    - run: clojure -X:rama
+    - run: clojure -A${{ matrix.alias }} -X:rama
