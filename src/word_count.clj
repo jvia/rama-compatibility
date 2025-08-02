@@ -18,7 +18,7 @@
                (|hash *word)
                (+compound $$word-counts {*word (aggs/+count)}))))
 
-(defn run-module! []
+(defn run-module! [_]
   (with-open [ipc (rtest/create-ipc)]
     (rtest/launch-module! ipc WordCountModule {:tasks 4 :threads 2})
 

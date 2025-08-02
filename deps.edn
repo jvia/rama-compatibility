@@ -8,5 +8,6 @@
 
  :aliases
  {:dev      {}
+  :rama     {:exec-fn word-count/run-module!}
   :telemere {:extra-deps {com.taoensso/telemere       {:mvn/version "1.0.1"}
                           com.taoensso/telemere-slf4j {:mvn/version "1.0.1"}}}}}
