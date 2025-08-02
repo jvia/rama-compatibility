@@ -5,13 +5,13 @@ on:
     branches: [ "main" ]
 
 jobs:
-  strategy:
-    matrix:
-      alias:
-      - :rama
-      - :telemere
-
   build:
+    strategy:
+      matrix:
+        alias:
+        - :rama
+        - :telemere
+
     runs-on: ubuntu-latest
 
     steps:
