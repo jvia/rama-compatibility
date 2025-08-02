@@ -12,6 +12,7 @@ jobs:
         alias:
         - :rama
         - :telemere
+        - :vespa
 
     runs-on: ubuntu-latest
 
